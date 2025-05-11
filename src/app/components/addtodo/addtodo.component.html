@@ -1,0 +1,13 @@
+<div class="px-50 py-5">
+    <form (ngSubmit)="onSubmit()">
+    <label for="title" class="text-xl font-bold">
+        Enter Title: 
+    </label> <br> 
+    <input type="text" id="title" name="title" placeholder="title" value="" class="border-1 rounded-sm p-1 w-full" [(ngModel)]="title"> <br> <br>
+    <label for="description" class="text-xl font-bold"> 
+        Enter Description: 
+    </label> <br>
+    <input type="text" id="description" name="description" placeholder="Enter description" class="border-1 rounded-sm p-1 w-full" [(ngModel)]="description">
+    <button class="bg-blue-700 rounded-lg text-white px-3 py-1 font-bold mt-5">Add todo</button>
+</form>
+</div>
