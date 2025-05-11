@@ -31,8 +31,15 @@ export class TodoItemsComponent {
     }
   }
 
+  doneTodo(todo: Todo){
+    const index = this.todos.indexOf(todo);
+    this.todos[index].completed = !todo.completed;
+    localStorage.setItem("todos", JSON.stringify(this.todos));
+  }
+
   addTodo(todo: Todo) {
     this.todos.push(todo);
     localStorage.setItem("todos", JSON.stringify(this.todos));
   }
+
 }
